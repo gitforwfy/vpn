@@ -32,7 +32,6 @@ public class NatSession implements Serializable {
     public long vpnStartTime;
     public boolean isHttp;
 
-
     @Override
     public String toString() {
         return String.format("%s/%s:%d packet: %d", remoteHost, CommonMethods.ipIntToString(remoteIP),

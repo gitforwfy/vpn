@@ -15,7 +15,7 @@ import com.fnf.vpn.processparse.PortHostService;
 import com.fnf.vpn.utils.ACache;
 import com.fnf.vpn.utils.SocketUtils;
 import com.fnf.vpn.utils.TcpDataSaveHelper;
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.utils.TimeFormatUtil;
 import com.fnf.vpn.utils.VpnServiceHelper;
 
@@ -203,7 +203,7 @@ public class UDPTunnel implements KeyHandler {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ThreadProxy.getInstance().execute(new Runnable() {
+                    ThreadPool.getInstance().execute(new Runnable() {
                         @Override
                         public void run() {
                             if (session.receiveByteNum == 0 && session.bytesSent == 0) {

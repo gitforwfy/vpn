@@ -20,7 +20,7 @@ import android.widget.Toast;
 import com.fnf.vpn.nat.NatSession;
 import com.fnf.vpn.utils.ACache;
 import com.fnf.vpn.processparse.AppInfo;
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.utils.TimeFormatUtil;
 import com.fnf.vpn.VPNConstants;
 
@@ -65,7 +65,7 @@ public class ConnectionListActivity extends Activity {
     }
 
     private void getDataAndRefreshView() {
-        ThreadProxy.getInstance().execute(new Runnable() {
+        ThreadPool.getInstance().execute(new Runnable() {
             @Override
             public void run() {
                 baseNetSessions = new ArrayList<>();

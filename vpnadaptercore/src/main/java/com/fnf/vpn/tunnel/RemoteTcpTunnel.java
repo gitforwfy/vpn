@@ -9,7 +9,7 @@ import com.fnf.vpn.nat.NatSessionManager;
 import com.fnf.vpn.processparse.PortHostService;
 import com.fnf.vpn.utils.ACache;
 import com.fnf.vpn.utils.TcpDataSaveHelper;
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.utils.TimeFormatUtil;
 
 import java.io.File;
@@ -79,7 +79,7 @@ public class RemoteTcpTunnel extends RawTcpTunnel {
             return;
         }
         if (PortHostService.getInstance() != null) {
-            ThreadProxy.getInstance().execute(new Runnable() {
+            ThreadPool.getInstance().execute(new Runnable() {
                 @Override
                 public void run() {
                     PortHostService.getInstance().refreshSessionInfo();
@@ -101,7 +101,7 @@ public class RemoteTcpTunnel extends RawTcpTunnel {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                ThreadProxy.getInstance().execute(new Runnable() {
+                ThreadPool.getInstance().execute(new Runnable() {
                     @Override
                     public void run() {
                         if (session.receiveByteNum == 0 && session.bytesSent == 0) {

@@ -21,6 +21,8 @@ import java.util.Set;
 
 /**
  * Created by zengzheying on 15/12/30.
+ *
+ * 数据交换的逻辑都在这里
  */
 public class TcpProxyServer implements Runnable {
     private static final String TAG = "TcpProxyServer";

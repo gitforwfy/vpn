@@ -25,7 +25,7 @@ import com.fnf.vpn.tcpip.UDPHeader;
 import com.fnf.vpn.utils.AppDebug;
 import com.fnf.vpn.utils.CommonMethods;
 import com.fnf.vpn.utils.DebugLog;
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.utils.TimeFormatUtil;
 import com.fnf.vpn.utils.VpnServiceHelper;
 
@@ -201,7 +201,7 @@ public class FirewallVpnService extends VpnService implements Runnable {
             session = NatSessionManager.createSession(portKey, ipHeader.getDestinationIP(), tcpHeader
                     .getDestinationPort(), NatSession.UDP);
             session.vpnStartTime = vpnStartTime;
-            ThreadProxy.getInstance().execute(new Runnable() {
+            ThreadPool.getInstance().execute(new Runnable() {
                 @Override
                 public void run() {
                     if(PortHostService.getInstance()!=null){
@@ -252,14 +252,13 @@ public class FirewallVpnService extends VpnService implements Runnable {
                 session = NatSessionManager.createSession(portKey, ipHeader.getDestinationIP(), tcpHeader
                         .getDestinationPort(), NatSession.TCP);
                 session.vpnStartTime = vpnStartTime;
-                ThreadProxy.getInstance().execute(new Runnable() {
+                ThreadPool.getInstance().execute(new Runnable() {
                     @Override
                     public void run() {
                         PortHostService instance = PortHostService.getInstance();
                         if (instance != null) {
                             instance.refreshSessionInfo();
                         }
-
                     }
                 });
             }
@@ -427,7 +426,7 @@ public class FirewallVpnService extends VpnService implements Runnable {
             if(udpServer!=null){
                 udpServer.closeAllUDPConn();
             }
-            ThreadProxy.getInstance().execute(new Runnable() {
+            ThreadPool.getInstance().execute(new Runnable() {
                 @Override
                 public void run() {
                     if(PortHostService.getInstance()!=null){

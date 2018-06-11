@@ -22,6 +22,9 @@ import java.util.List;
 
 /**
  * Created by zengzheying on 16/1/12.
+ *
+ * 从单例服务中获取数据
+ *
  */
 public class VpnServiceHelper {
     static Context context;

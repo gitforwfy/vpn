@@ -1,7 +1,6 @@
 package com.fnf.vpn.utils;
 
 import com.fnf.vpn.VPNLog;
-import com.fnf.vpn.utils.ThreadProxy;
 
 import java.io.Closeable;
 import java.io.File;
@@ -29,7 +28,7 @@ public class TcpDataSaveHelper {
     }
 
     public void addData(final SaveData data) {
-        ThreadProxy.getInstance().execute(new Runnable() {
+        ThreadPool.getInstance().execute(new Runnable() {
             @Override
             public void run() {
                 if (lastSaveData == null || (lastSaveData.isRequest ^ data.isRequest)) {

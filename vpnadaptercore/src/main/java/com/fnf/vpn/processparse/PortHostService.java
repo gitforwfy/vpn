@@ -17,6 +17,8 @@ import java.util.List;
  * @author minhui.zhu
  *         Created by minhui.zhu on 2018/5/5.
  *         Copyright © 2017年 Oceanwing. All rights reserved.
+ *         管理并提供回话
+ *
  */
 
 public class PortHostService extends Service {
@@ -63,6 +65,7 @@ public class PortHostService extends Service {
 
     }
 
+    //刷新包名的信息的
     private void refreshSessionInfo(List<NatSession> netConnections) {
         if (isRefresh || netConnections == null) {
             return;

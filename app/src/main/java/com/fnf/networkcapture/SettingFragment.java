@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.fnf.vpn.service.FirewallVpnService;
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.VPNConstants;
 
 import java.io.File;
@@ -93,7 +93,7 @@ public class SettingFragment extends BaseFragment {
     private boolean isDeleting;
 
     private void clearHistoryData() {
-        ThreadProxy.getInstance().execute(new Runnable() {
+        ThreadPool.getInstance().execute(new Runnable() {
 
 
             @Override

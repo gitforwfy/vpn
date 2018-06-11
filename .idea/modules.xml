@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NetWorkPacketCapture-master.iml" filepath="$PROJECT_DIR$/NetWorkPacketCapture-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vpn.iml" filepath="$PROJECT_DIR$/vpn.iml" />
       <module fileurl="file://$PROJECT_DIR$/vpnadaptercore/vpnadaptercore.iml" filepath="$PROJECT_DIR$/vpnadaptercore/vpnadaptercore.iml" />
     </modules>
   </component>

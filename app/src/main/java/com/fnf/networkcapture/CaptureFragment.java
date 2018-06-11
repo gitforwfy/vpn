@@ -14,7 +14,7 @@ import android.widget.ListView;
 import com.fnf.vpn.ProxyConfig;
 import com.fnf.vpn.nat.NatSession;
 import com.fnf.vpn.processparse.AppInfo;
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.utils.TimeFormatUtil;
 import com.fnf.vpn.VPNConstants;
 import com.fnf.vpn.utils.VpnServiceHelper;
@@ -27,7 +27,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import static com.fnf.vpn.VPNConstants.DEFAULT_PACKAGE_ID;
-import static com.fnf.vpn.VPNConstants.VPN_SP_NAME;
 
 
 /**
@@ -38,7 +37,7 @@ import static com.fnf.vpn.VPNConstants.VPN_SP_NAME;
 
 public class CaptureFragment extends BaseFragment {
     private static final String TAG = "CaptureFragment";
-
+    //启动计时器每个一秒刷新数据
     ProxyConfig.VpnStatusListener listener = new ProxyConfig.VpnStatusListener() {
 
         @Override
@@ -118,9 +117,10 @@ public class CaptureFragment extends BaseFragment {
 
     }
 
+    //以最终启动时间为目录 遍历创建bean
     private void getDataAndRefreshView() {
 
-        ThreadProxy.getInstance().execute(new Runnable() {
+        ThreadPool.getInstance().execute(new Runnable() {
             @Override
             public void run() {
                 allNetConnection = VpnServiceHelper.getAllSession();

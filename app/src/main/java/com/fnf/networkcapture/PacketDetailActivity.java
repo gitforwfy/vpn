@@ -15,7 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.fnf.vpn.utils.SaveDataFileParser;
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -57,7 +57,7 @@ public class PacketDetailActivity extends Activity {
     }
 
     private void refreshView() {
-        ThreadProxy.getInstance().execute(new Runnable() {
+        ThreadPool.getInstance().execute(new Runnable() {
             @Override
             public void run() {
                 File file = new File(dir);

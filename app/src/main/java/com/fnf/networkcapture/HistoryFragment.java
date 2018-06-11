@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.VPNConstants;
 
 import java.io.File;
@@ -64,7 +64,7 @@ public class HistoryFragment extends BaseFragment {
     }
 
     private void getDataAndRefreshView() {
-        ThreadProxy.getInstance().execute(new Runnable() {
+        ThreadPool.getInstance().execute(new Runnable() {
             @Override
             public void run() {
                 File file = new File(VPNConstants.CONFIG_DIR);

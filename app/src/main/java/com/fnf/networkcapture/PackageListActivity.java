@@ -16,7 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
-import com.fnf.vpn.utils.ThreadProxy;
+import com.fnf.vpn.utils.ThreadPool;
 
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class PackageListActivity extends Activity {
 
         pm = getPackageManager();
         packageListView = (ListView) findViewById(R.id.package_list);
-        ThreadProxy.getInstance().execute(new Runnable() {
+        ThreadPool.getInstance().execute(new Runnable() {
 
             private ShowPackageAdapter showPackageAdapter;
 
@@ -129,7 +129,7 @@ public class PackageListActivity extends Activity {
             }
             holder.icon.setImageDrawable(defaultDrawable);
             final View alertIconView = convertView;
-            ThreadProxy.getInstance().execute(new Runnable() {
+            ThreadPool.getInstance().execute(new Runnable() {
                 @Override
                 public void run() {
                     Holder iconHolder = (Holder) alertIconView.getTag();

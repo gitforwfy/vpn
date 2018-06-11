@@ -14,15 +14,15 @@ import java.util.concurrent.TimeUnit;
  *         Copyright © 2017年 Oceanwing. All rights reserved.
  */
 
-public class ThreadProxy {
+public class ThreadPool {
 
     private final Executor executor;
 
     static class InnerClass {
-        static ThreadProxy instance = new ThreadProxy();
+        static ThreadPool instance = new ThreadPool();
     }
 
-    private ThreadProxy() {
+    private ThreadPool() {
 
         executor = new ThreadPoolExecutor(1, 4,
                 10L, TimeUnit.MILLISECONDS,
@@ -30,7 +30,7 @@ public class ThreadProxy {
             @Override
             public Thread newThread(@NonNull Runnable r) {
                 Thread thread = new Thread(r);
-                thread.setName("ThreadProxy");
+                thread.setName("ThreadPool");
                 return thread;
             }
         });
@@ -38,7 +38,7 @@ public class ThreadProxy {
     public void execute(Runnable run){
         executor.execute(run);
     }
-    public static ThreadProxy getInstance(){
+    public static ThreadPool getInstance(){
         return InnerClass.instance;
     }
 }
