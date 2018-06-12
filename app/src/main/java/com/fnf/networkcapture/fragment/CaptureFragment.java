@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.fragment;
 
 
 import android.content.Context;
@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.fnf.networkcapture.adapter.ConnectionAdapter;
+import com.fnf.networkcapture.activity.PacketDetailActivity;
+import com.fnf.networkcapture.R;
 import com.fnf.vpn.ProxyConfig;
 import com.fnf.vpn.nat.NatSession;
 import com.fnf.vpn.processparse.AppInfo;

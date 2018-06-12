@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.utils;
 
 import java.io.*;
 
@@ -8,7 +8,7 @@ import java.io.*;
  *         Copyright © 2017年 Oceanwing. All rights reserved.
  */
 
-class FileUtils {
+public class FileUtils {
     public static void deleteFile(File file, FileFilter fileFilter) {
         if (file == null) {
             return;

@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -7,6 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fnf.networkcapture.R;
 import com.fnf.vpn.nat.NatSession;
 import com.fnf.vpn.processparse.AppInfo;
 import com.fnf.vpn.utils.TimeFormatUtil;
@@ -23,7 +24,7 @@ public class ConnectionAdapter extends BaseAdapter {
     private final Context context;
     private List<NatSession> netConnections;
 
-    ConnectionAdapter(Context context, List<NatSession> netConnections) {
+    public ConnectionAdapter(Context context, List<NatSession> netConnections) {
         this.context = context;
         this.netConnections = netConnections;
     }

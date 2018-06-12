@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!--<uses-permission android:name="android.permission.READ_LOGS" />-->
 
     <application
         android:name=".MyApplication"
@@ -23,16 +23,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.fnf.networkcapture.PackageListActivity"
+            android:name="com.fnf.networkcapture.activity.PackageListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.fnf.networkcapture.PacketDetailActivity"
+            android:name="com.fnf.networkcapture.activity.PacketDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.fnf.networkcapture.ConnectionListActivity"
+            android:name="com.fnf.networkcapture.activity.ConnectionListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.fnf.networkcapture.AboutActivity"
+            android:name="com.fnf.networkcapture.activity.AboutActivity"
             android:screenOrientation="portrait" />
     </application>
 

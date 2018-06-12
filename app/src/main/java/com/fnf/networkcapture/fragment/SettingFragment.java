@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.fragment;
 
 
 import android.content.Context;
@@ -13,6 +13,9 @@ import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.fnf.networkcapture.activity.AboutActivity;
+import com.fnf.networkcapture.utils.FileUtils;
+import com.fnf.networkcapture.R;
 import com.fnf.vpn.service.FirewallVpnService;
 import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.VPNConstants;

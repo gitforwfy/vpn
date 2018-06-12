@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

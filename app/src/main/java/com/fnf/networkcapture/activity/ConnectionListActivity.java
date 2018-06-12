@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fnf.networkcapture.R;
 import com.fnf.vpn.nat.NatSession;
 import com.fnf.vpn.utils.ACache;
 import com.fnf.vpn.processparse.AppInfo;

@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

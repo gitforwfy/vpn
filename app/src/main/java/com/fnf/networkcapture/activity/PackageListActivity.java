@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
+import com.fnf.networkcapture.bean.PackageShowInfo;
+import com.fnf.networkcapture.R;
 import com.fnf.vpn.utils.ThreadPool;
 
 import java.util.List;

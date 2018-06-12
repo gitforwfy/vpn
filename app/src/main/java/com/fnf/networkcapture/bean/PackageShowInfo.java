@@ -1,15 +1,12 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.bean;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -23,8 +20,8 @@ import java.util.List;
 
 public class PackageShowInfo implements Parcelable {
     private static final java.lang.String NO_APP_NAME = "COM.";
-    String appName;
-    String packageName;
+    public String appName;
+    public String packageName;
     public ApplicationInfo applicationInfo;
 
     public static List<PackageShowInfo> getPackageShowInfo(Context context) {

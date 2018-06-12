@@ -1,9 +1,11 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+
+import com.fnf.networkcapture.R;
 
 /**
  * @author minhui.zhu

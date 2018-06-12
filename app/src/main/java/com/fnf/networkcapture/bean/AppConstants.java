@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.bean;
 
 /**
  * @author minhui.zhu

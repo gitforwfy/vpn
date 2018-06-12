@@ -1,4 +1,4 @@
-package com.fnf.networkcapture;
+package com.fnf.networkcapture.fragment;
 
 
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.fnf.networkcapture.activity.ConnectionListActivity;
+import com.fnf.networkcapture.R;
 import com.fnf.vpn.utils.ThreadPool;
 import com.fnf.vpn.VPNConstants;
 

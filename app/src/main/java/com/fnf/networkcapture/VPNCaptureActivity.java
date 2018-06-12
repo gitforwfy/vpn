@@ -40,12 +40,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fnf.networkcapture.activity.PackageListActivity;
+import com.fnf.networkcapture.bean.AppConstants;
+import com.fnf.networkcapture.bean.PackageShowInfo;
+import com.fnf.networkcapture.fragment.BaseFragment;
+import com.fnf.networkcapture.fragment.CaptureFragment;
+import com.fnf.networkcapture.fragment.HistoryFragment;
+import com.fnf.networkcapture.fragment.SettingFragment;
 import com.fnf.vpn.ProxyConfig;
 import com.fnf.vpn.VPNLog;
 import com.fnf.vpn.utils.VpnServiceHelper;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import static com.fnf.vpn.VPNConstants.*;
